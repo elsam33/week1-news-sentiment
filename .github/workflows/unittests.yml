@@ -1,6 +1,8 @@
- name: Python CI
+name: Python CI
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
 
 jobs:
   build:
@@ -21,6 +23,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Run simple test
-      run: |
-        echo "CI Pipeline Running Successfully!"
-
+      run: echo "Workflow is running correctly"
